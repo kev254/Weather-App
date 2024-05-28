@@ -1,41 +1,93 @@
-# Waether App
+# Weather App (Task) Documentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This documentation will guide you through setting up, running, and understanding the Weather App built using Flutter.
 
-![App Screenshot](screenshots/1.png)
-![App Screenshot](screenshots/2.png)
-![App Screenshot](screenshots/3.png)
+App Screenshots:
+  ![App Screenshot](screenshots/1.jpeg)
+  ![App Screenshot](screenshots/2.jpeg)
+  ![App Screenshot](screenshots/3.jpeg)
 
-## Available Scripts
-
+Available Scripts:
+-------------------
 In the project directory, you can run:
 
-### `npm start`
+### `flutter pub get`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Fetches the necessary dependencies for the project.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `flutter run`
 
-### `npm test`
+Runs the app in development mode.
+Connect an Android or iOS device/emulator and use this command to view it.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Setting up Flutter on Android Studio:
+-------------------------------------
+1. Download and install Android Studio from the official website: https://developer.android.com/studio
+2. Install the Flutter and Dart plugins for Android Studio:
+    - Open Android Studio.
+    - Go to Preferences > Plugins.
+    - Search for 'Flutter' and install it (this will also install the Dart plugin).
+    - Restart Android Studio.
 
-### `npm run build`
+3. Set up the Flutter SDK:
+    - Download the Flutter SDK from the official website: https://flutter.dev/docs/get-started/install
+    - Extract the downloaded file to the desired location on your machine.
+    - Add the Flutter SDK path to your system environment variables.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Verify the Flutter installation:
+    - Open a terminal and run `flutter doctor` to check if there are any dependencies you need to install.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Cloning and Running the App:
+-----------------------------
+1. Clone the repository from GitHub:
+    - Open a terminal and run:
+      ```
+      git clone https://github.com/kev254/Weather-App.git
+      ```
+    - Navigate to the project directory:
+      ```
+      cd Weather-App
+      ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Fetch the project dependencies:
+    - Run the following command to install the necessary packages:
+      ```
+      flutter pub get
+      ```
 
+3. Connect a device or start an emulator:
+    - Connect your Android or iOS device via USB, or start an Android emulator.
 
-### `Apk file`
+4. Run the app:
+    - Use the following command to start the app:
+      ```
+      flutter run
+      ```
 
+APK File:
+---------
+To test the app on a real device, download the APK file from the following link:
+[Download APK File](screenshots/app-release.apk)
 
+Project Dependencies:
+----------------------
+The project uses the following dependencies:
+- provider: ^5.0.0
+- http: ^0.13.3
+- fl_chart: ^0.36.0
 
-See the live preview [DOWNLOAD APK FILE ](https://taskmanager.zebex.me/); 
+These dependencies are defined in the `pubspec.yaml` file.
+
+App Features:
+-------------
+The Weather App allows users to:
+- Search for weather information by city.
+- View current weather conditions including temperature, humidity, and wind speed.
+- View a 5-day weather forecast.
+- View temperature trends in a line chart.
+
+The app fetches weather data from the OpenWeatherMap API.
+
+Note:
+-----
+Ensure you have a stable internet connection to fetch real-time weather data from the API.
